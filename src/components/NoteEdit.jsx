@@ -81,7 +81,8 @@ class NoteEdit extends React.Component {
 }
 
 NoteEdit.propTypes = {
-    editNote: PropTypes.func.isRequired
+    editNote: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired
 }
 
 export default NoteEditWrapper;

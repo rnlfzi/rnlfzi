@@ -72,9 +72,10 @@ class DetailPage extends React.Component {
 }
 
 DetailPage.propTypes = {
+    id: PropTypes.string.isRequired,
     onDelete: PropTypes.func,
     onArchive: PropTypes.func,
-    onUnarchived: PropTypes.func
+    onUnarchived: PropTypes.func,
 }
 
 export default DetailPageWrapper;

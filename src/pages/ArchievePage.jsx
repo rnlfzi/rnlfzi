@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import NotedList from '../components/NotedList';
 import { getArchivedNotes } from '../utils/local-data';
 
@@ -25,10 +24,6 @@ class ArchievePage extends React.Component {
             </section>
         )
     }
-}
-
-NotedList.propTypes = {
-    notes: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default ArchievePage;
