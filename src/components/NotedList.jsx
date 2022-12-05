@@ -18,7 +18,7 @@ const NotedList = ({notes}) => {
 }
 
 NotedList.propTypes = {
-    notes: PropTypes.array.isRequired
+    notes: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default NotedList;

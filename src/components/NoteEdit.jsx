@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getNote } from '../utils/local-data';
 import { useNavigate } from 'react-router-dom';
@@ -77,6 +78,10 @@ class NoteEdit extends React.Component {
             </form>
         )
     }
+}
+
+NoteEdit.propTypes = {
+    editNote: PropTypes.func.isRequired
 }
 
 export default NoteEditWrapper;

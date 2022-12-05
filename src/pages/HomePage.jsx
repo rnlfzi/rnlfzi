@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSearchParams } from 'react-router-dom';
 import NotedList from '../components/NotedList';
 import SearchBar from '../components/SearchBar';
@@ -57,6 +58,12 @@ class HomePage extends React.Component {
             </section>
         )
     }
+}
+
+HomePage.propTypes = {
+    keyword: PropTypes.string,
+    keywordChange: PropTypes.func.isRequired,
+    notes: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default HomePageWrapper;

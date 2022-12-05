@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NotesDetail from  '../components/NotesDetail';
 import { useParams } from 'react-router-dom';
 import { getNote, deleteNote, getAllNotes, archiveNote, unarchiveNote } from '../utils/local-data';
@@ -13,7 +14,7 @@ class DetailPage extends React.Component {
         super(props)
 
         this.state = {
-            notes: getNote(props.id)
+            note: getNote(props.id)
         }
 
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -60,7 +61,7 @@ class DetailPage extends React.Component {
                     </div>
                 )}
                 <NotesDetail 
-                    {...this.state.notes} 
+                    {...this.state.note} 
                     onDelete={this.onDeleteHandler} 
                     onArchive={this.onArchiveHandler} 
                     onUnarchived={this.onUnarchiveHandler}
@@ -68,6 +69,12 @@ class DetailPage extends React.Component {
             </section>
         )
     }
+}
+
+DetailPage.propTypes = {
+    onDelete: PropTypes.func,
+    onArchive: PropTypes.func,
+    onUnarchived: PropTypes.func
 }
 
 export default DetailPageWrapper;
